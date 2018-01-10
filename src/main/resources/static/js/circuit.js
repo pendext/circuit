@@ -1,14 +1,13 @@
 $(document).ready(function() {
-  $("#spinner").hide();
   $(document).on("click", "#dateTime", function() {
-    $("#spinner").show();
+    $("#spinner").css("visibility", "visible");
     $.get({
       url: "date",
       cache: false,
       success: function(resp) {
         $("#placeholder").text("");
         $("#placeholder").text("The current date/time is " + resp.month + " " + resp.dayOfMonth + ", " + resp.year + " " + resp.hour + ":" + resp.minute + ":" + resp.second);
-        $("#spinner").hide();
+        $("#spinner").css("visibility", "hidden");
       }
     });
 
