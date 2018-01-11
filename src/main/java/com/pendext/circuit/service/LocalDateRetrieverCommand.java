@@ -30,6 +30,7 @@ public class LocalDateRetrieverCommand extends HystrixCommand<LocalDateTimeJson>
         } catch (IOException e) {
             e.printStackTrace();
         }
+//        throw new RuntimeException("oops");
         return localDateTimeJson;
     }
 
